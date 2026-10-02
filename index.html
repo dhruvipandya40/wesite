@@ -1,0 +1,1800 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>For My Cutiee ❤️</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=DM+Serif+Display:ital@0;1&family=Great+Vibes&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+
+<style>
+
+/* =====================================================
+   RESET
+===================================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#100607;
+    color:#f5e6c8;
+    font-family:"Playfair Display",serif;
+    overflow-x:hidden;
+}
+
+/* =====================================================
+   LUXURY BACKGROUND
+===================================================== */
+
+body::before{
+    content:"";
+    position:fixed;
+    inset:0;
+    z-index:-10;
+
+    background:
+        radial-gradient(
+            circle at 50% 35%,
+            rgba(112,20,30,.45),
+            transparent 35%
+        ),
+        radial-gradient(
+            circle at 15% 80%,
+            rgba(212,175,55,.08),
+            transparent 28%
+        ),
+        radial-gradient(
+            circle at 85% 15%,
+            rgba(120,25,35,.15),
+            transparent 30%
+        ),
+        linear-gradient(
+            135deg,
+            #090304,
+            #21080c 45%,
+            #0b0405
+        );
+}
+
+body::after{
+    content:"";
+    position:fixed;
+    inset:24px;
+    border:1px solid rgba(212,175,55,.20);
+    pointer-events:none;
+    z-index:999;
+}
+
+/* =====================================================
+   PARTICLES
+===================================================== */
+
+.particle{
+    position:fixed;
+    width:3px;
+    height:3px;
+    border-radius:50%;
+    background:#d4af37;
+    opacity:.35;
+    pointer-events:none;
+    animation:floatParticle 7s infinite ease-in-out;
+    z-index:-1;
+}
+
+.p1{top:15%;left:12%;}
+.p2{top:25%;left:83%;animation-delay:1s;}
+.p3{top:70%;left:17%;animation-delay:2s;}
+.p4{top:80%;left:78%;animation-delay:3s;}
+.p5{top:42%;left:91%;animation-delay:4s;}
+.p6{top:60%;left:7%;animation-delay:5s;}
+
+@keyframes floatParticle{
+
+    0%,100%{
+        transform:translateY(0);
+        opacity:.2;
+    }
+
+    50%{
+        transform:translateY(-25px);
+        opacity:.8;
+    }
+}
+
+/* =====================================================
+   COMMON
+===================================================== */
+
+.page{
+    min-height:100vh;
+    position:relative;
+}
+
+.gold{
+    color:#d4af37;
+}
+
+/* =====================================================
+   PAGE 1 — ENVELOPE
+===================================================== */
+
+#openingPage{
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+
+    transition:
+        opacity 1.2s ease,
+        transform 1.2s ease;
+}
+
+.opening-subtitle{
+    font-family:"Cinzel",serif;
+    font-size:11px;
+    letter-spacing:7px;
+    text-transform:uppercase;
+    color:#c9a84e;
+    margin-bottom:40px;
+}
+
+.envelope-wrapper{
+    width:380px;
+    height:260px;
+    position:relative;
+    perspective:1200px;
+    cursor:pointer;
+}
+
+.envelope{
+    width:100%;
+    height:100%;
+    position:absolute;
+
+    background:
+        linear-gradient(
+            145deg,
+            #8e1721,
+            #4c0b11
+        );
+
+    border:1px solid rgba(212,175,55,.5);
+
+    box-shadow:
+        0 40px 90px rgba(0,0,0,.75),
+        0 0 35px rgba(212,175,55,.05);
+
+    border-radius:3px;
+}
+
+/* Envelope front */
+
+.envelope-front{
+    position:absolute;
+    inset:0;
+    z-index:3;
+
+    background:
+        linear-gradient(
+            135deg,
+            transparent 49.5%,
+            #641018 50%
+        ),
+        linear-gradient(
+            225deg,
+            transparent 49.5%,
+            #74131c 50%
+        ),
+        #681018;
+}
+
+/* Envelope flap */
+
+.flap{
+    position:absolute;
+    width:100%;
+    height:135px;
+    top:0;
+    left:0;
+
+    background:
+        linear-gradient(
+            145deg,
+            #a31c27,
+            #631018
+        );
+
+    clip-path:polygon(
+        0 0,
+        100% 0,
+        50% 100%
+    );
+
+    transform-origin:top center;
+    transition:
+        transform 1.3s
+        cubic-bezier(.77,0,.18,1);
+
+    z-index:5;
+}
+
+/* Gold detail */
+
+.envelope-gold-line{
+    position:absolute;
+    width:84%;
+    left:8%;
+    bottom:30px;
+    height:1px;
+
+    background:
+        linear-gradient(
+            to right,
+            transparent,
+            #d4af37,
+            transparent
+        );
+
+    z-index:7;
+    opacity:.7;
+}
+
+/* =====================================================
+   WAX SEAL
+===================================================== */
+
+.wax-seal{
+    width:82px;
+    height:82px;
+
+    position:absolute;
+    left:50%;
+    top:110px;
+
+    transform:translateX(-50%);
+
+    border-radius:50%;
+
+    background:
+        radial-gradient(
+            circle at 30% 25%,
+            #f0d06b,
+            #b88920 50%,
+            #684307 100%
+        );
+
+    border:3px solid #c99d32;
+
+    box-shadow:
+        0 10px 25px rgba(0,0,0,.6),
+        inset 0 2px 5px rgba(255,255,255,.25);
+
+    z-index:10;
+
+    transition:
+        .6s ease;
+}
+
+.wax-seal::before{
+    content:"P";
+
+    position:absolute;
+    inset:0;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    font-family:"Cinzel",serif;
+    font-weight:700;
+    font-size:32px;
+
+    color:#604006;
+}
+
+.opened .flap{
+    transform:rotateX(180deg);
+}
+
+.opened .wax-seal{
+    opacity:0;
+    transform:
+        translateX(-50%)
+        scale(.4);
+}
+
+/* =====================================================
+   OPEN BUTTON
+===================================================== */
+
+.open-button{
+    position:absolute;
+    left:50%;
+    top:52%;
+
+    transform:
+        translate(-50%,-50%)
+        scale(.5);
+
+    opacity:0;
+    pointer-events:none;
+
+    padding:15px 45px;
+
+    border:1px solid #e1c55e;
+    border-radius:2px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #b88920,
+            #f0d77a,
+            #b88920
+        );
+
+    color:#35090d;
+
+    font-family:"Cinzel",serif;
+    font-weight:700;
+    letter-spacing:5px;
+
+    cursor:pointer;
+
+    box-shadow:
+        0 10px 30px rgba(0,0,0,.45),
+        0 0 25px rgba(212,175,55,.18);
+
+    z-index:20;
+
+    transition:1s ease;
+}
+
+.opened .open-button{
+    opacity:1;
+    pointer-events:auto;
+
+    transform:
+        translate(-50%,-50%)
+        scale(1);
+
+    transition-delay:.8s;
+}
+
+.open-button:hover{
+    transform:
+        translate(-50%,-50%)
+        scale(1.07);
+
+    letter-spacing:6px;
+}
+
+.open-hint{
+    margin-top:48px;
+
+    font-family:"Cinzel",serif;
+    font-size:9px;
+    letter-spacing:5px;
+
+    color:rgba(245,230,200,.5);
+}
+
+/* =====================================================
+   MAIN WEBSITE
+===================================================== */
+
+#mainWebsite{
+    display:none;
+}
+
+/* =====================================================
+   NAV ARROW
+===================================================== */
+
+.next-arrow{
+    position:absolute;
+
+    right:45px;
+    top:50%;
+
+    transform:translateY(-50%);
+
+    width:58px;
+    height:58px;
+
+    border:1px solid rgba(212,175,55,.6);
+    border-radius:50%;
+
+    background:rgba(20,5,7,.65);
+
+    color:#d4af37;
+
+    font-size:24px;
+
+    cursor:pointer;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    transition:.4s ease;
+
+    z-index:50;
+}
+
+.next-arrow:hover{
+    background:#d4af37;
+    color:#27080c;
+
+    transform:
+        translateY(-50%)
+        translateX(5px);
+
+    box-shadow:
+        0 0 30px rgba(212,175,55,.25);
+}
+
+/* =====================================================
+   PAGE 2 — LETTER INTRO
+===================================================== */
+
+.letter-page{
+    min-height:100vh;
+    padding:90px 100px 120px;
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+
+.page-label{
+    font-family:"Cinzel",serif;
+    letter-spacing:7px;
+    font-size:11px;
+    color:#d4af37;
+    text-transform:uppercase;
+    margin-bottom:20px;
+}
+
+.big-title{
+    font-family:"DM Serif Display",serif;
+    font-style:italic;
+
+    text-align:center;
+
+    font-size:
+        clamp(
+            45px,
+            7vw,
+            88px
+        );
+
+    line-height:1;
+
+    color:#f3e1b4;
+
+    text-shadow:
+        0 5px 30px rgba(0,0,0,.6);
+
+    margin-bottom:12px;
+}
+
+.big-title-script{
+    font-family:"Great Vibes",cursive;
+
+    color:#c79a28;
+
+    font-size:
+        clamp(
+            42px,
+            6vw,
+            70px
+        );
+
+    margin-bottom:65px;
+}
+
+/* =====================================================
+   LETTER
+===================================================== */
+
+.letter-paper{
+    width:min(920px,90%);
+
+    position:relative;
+
+    background:
+        linear-gradient(
+            135deg,
+            #f5ecd7,
+            #e9ddbf
+        );
+
+    color:#321b17;
+
+    padding:
+        75px
+        clamp(30px,7vw,90px);
+
+    border:8px solid #dfcfaa;
+
+    box-shadow:
+        0 35px 100px rgba(0,0,0,.65),
+        0 0 0 1px rgba(212,175,55,.5);
+}
+
+.letter-paper::before{
+    content:"";
+
+    position:absolute;
+    inset:14px;
+
+    border:
+        1px solid
+        rgba(100,65,20,.4);
+
+    pointer-events:none;
+}
+
+.letter-inner{
+    position:relative;
+    z-index:2;
+}
+
+.dear{
+    font-family:"Great Vibes",cursive;
+    color:#741520;
+    font-size:43px;
+    margin-bottom:25px;
+}
+
+.letter-paper p{
+    font-size:17px;
+    line-height:2;
+    margin-bottom:25px;
+}
+
+.letter-ending{
+    margin-top:40px;
+
+    font-family:"Great Vibes",cursive;
+
+    color:#741520;
+    font-size:38px;
+}
+
+.forever{
+    font-style:italic;
+    margin-top:8px;
+}
+
+/* =====================================================
+   PAGE 3 — AWARD
+===================================================== */
+
+.award-page{
+    min-height:100vh;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    padding:80px 120px;
+}
+
+.certificate{
+    width:min(900px,90%);
+
+    padding:80px 70px;
+
+    text-align:center;
+
+    position:relative;
+
+    background:
+        linear-gradient(
+            135deg,
+            #320b10,
+            #5b1018,
+            #28070b
+        );
+
+    border:
+        2px solid
+        #c79a28;
+
+    box-shadow:
+        0 35px 100px rgba(0,0,0,.7),
+        inset 0 0 50px rgba(0,0,0,.3);
+}
+
+.certificate::before{
+    content:"";
+
+    position:absolute;
+    inset:18px;
+
+    border:
+        1px solid
+        rgba(212,175,55,.6);
+
+    pointer-events:none;
+}
+
+.certificate-top{
+    font-family:"Cinzel",serif;
+    letter-spacing:8px;
+    color:#d4af37;
+    font-size:12px;
+    margin-bottom:25px;
+}
+
+.award-title{
+    font-family:"DM Serif Display",serif;
+    font-style:italic;
+
+    color:#f5e5b7;
+
+    font-size:
+        clamp(
+            45px,
+            7vw,
+            78px
+        );
+
+    margin-bottom:35px;
+}
+
+.award-line{
+    width:120px;
+    height:1px;
+    margin:0 auto 35px;
+
+    background:
+        linear-gradient(
+            to right,
+            transparent,
+            #d4af37,
+            transparent
+        );
+}
+
+.award-text{
+    max-width:680px;
+    margin:auto;
+
+    font-size:20px;
+    line-height:1.9;
+
+    color:#eadbb9;
+}
+
+.award-seal{
+    width:80px;
+    height:80px;
+
+    margin:45px auto 0;
+
+    border-radius:50%;
+
+    border:2px solid #d4af37;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    font-family:"Cinzel",serif;
+    font-size:11px;
+    letter-spacing:2px;
+
+    color:#d4af37;
+
+    transform:rotate(-8deg);
+}
+
+/* =====================================================
+   PAGE 4 — MUSIC
+===================================================== */
+
+.music-page{
+    min-height:100vh;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    padding:70px 30px;
+
+    text-align:center;
+
+    position:relative;
+
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(82,17,27,.65),
+            transparent 50%
+        );
+}
+
+.music-stars{
+    position:absolute;
+    inset:0;
+    pointer-events:none;
+}
+
+.music-star{
+    position:absolute;
+    color:#d4af37;
+    opacity:.55;
+    animation:starPulse 3s infinite ease-in-out;
+}
+
+.star1{top:18%;left:20%;}
+.star2{top:28%;right:22%;animation-delay:.8s;}
+.star3{bottom:22%;left:25%;animation-delay:1.4s;}
+.star4{bottom:28%;right:18%;animation-delay:2s;}
+.star5{top:45%;left:10%;animation-delay:1s;}
+.star6{top:55%;right:10%;animation-delay:2.4s;}
+
+@keyframes starPulse{
+    0%,100%{
+        opacity:.2;
+        transform:scale(.7);
+    }
+
+    50%{
+        opacity:1;
+        transform:scale(1.2);
+    }
+}
+
+.music-label{
+    font-family:"Cinzel",serif;
+    font-size:11px;
+    letter-spacing:7px;
+    color:#d4af37;
+    margin-bottom:25px;
+}
+
+.music-title{
+    font-family:"Great Vibes",cursive;
+    font-size:82px;
+    color:#f2dfb0;
+    margin-bottom:15px;
+}
+
+.music-subtitle{
+    font-family:"Playfair Display",serif;
+    font-style:italic;
+    color:#bba77d;
+    margin-bottom:45px;
+}
+
+.music-card{
+    width:min(620px,90%);
+
+    padding:45px 35px;
+
+    background:
+        rgba(18,6,8,.75);
+
+    border:
+        1px solid
+        rgba(212,175,55,.35);
+
+    box-shadow:
+        0 30px 70px rgba(0,0,0,.6);
+}
+
+.spotify-symbol{
+    width:85px;
+    height:85px;
+
+    margin:0 auto 25px;
+
+    border-radius:50%;
+
+    background:#d4af37;
+
+    color:#27080c;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    font-size:36px;
+    font-weight:bold;
+}
+
+.song-name{
+    font-family:"DM Serif Display",serif;
+    font-style:italic;
+    font-size:32px;
+    color:#f5e6c8;
+}
+
+.song-artist{
+    margin-top:8px;
+    color:#bba77d;
+}
+
+.play-song{
+    margin-top:30px;
+
+    padding:14px 38px;
+
+    border:1px solid #d4af37;
+
+    background:transparent;
+
+    color:#d4af37;
+
+    font-family:"Cinzel",serif;
+
+    letter-spacing:3px;
+
+    cursor:pointer;
+
+    transition:.4s ease;
+}
+
+.play-song:hover{
+    background:#d4af37;
+    color:#27080c;
+}
+
+/* YouTube player */
+
+.youtube-player{
+    width:0;
+    height:0;
+    opacity:0;
+    overflow:hidden;
+    position:absolute;
+}
+
+/* =====================================================
+   PAGE 5 — 10 THINGS TITLE
+===================================================== */
+
+.things-intro{
+    min-height:100vh;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+
+    padding:50px;
+}
+
+.things-small{
+    font-family:"Cinzel",serif;
+    letter-spacing:7px;
+    color:#d4af37;
+    font-size:11px;
+    margin-bottom:25px;
+}
+
+.things-title{
+    font-family:"DM Serif Display",serif;
+    font-style:italic;
+
+    font-size:
+        clamp(
+            50px,
+            8vw,
+            105px
+        );
+
+    color:#f1dfb3;
+
+    line-height:1;
+}
+
+.things-heart{
+    font-size:45px;
+    margin-top:25px;
+}
+
+/* =====================================================
+   PAGE 6 — 10 THINGS
+===================================================== */
+
+.things-page{
+    min-height:100vh;
+
+    padding:
+        90px
+        120px
+        130px;
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+
+.things-heading{
+    font-family:"DM Serif Display",serif;
+    font-style:italic;
+
+    font-size:
+        clamp(
+            42px,
+            6vw,
+            72px
+        );
+
+    color:#f3e1b4;
+
+    text-align:center;
+
+    margin-bottom:55px;
+}
+
+.things-list{
+    width:min(850px,90%);
+
+    display:grid;
+    gap:14px;
+}
+
+.thing{
+    display:flex;
+    align-items:center;
+    gap:22px;
+
+    padding:18px 25px;
+
+    border-bottom:
+        1px solid
+        rgba(212,175,55,.16);
+
+    transition:.35s ease;
+}
+
+.thing:hover{
+    transform:translateX(8px);
+    border-color:rgba(212,175,55,.55);
+}
+
+.number{
+    width:35px;
+    height:35px;
+
+    flex-shrink:0;
+
+    border:
+        1px solid
+        rgba(212,175,55,.5);
+
+    border-radius:50%;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    font-family:"Cinzel",serif;
+
+    font-size:11px;
+
+    color:#d4af37;
+}
+
+.thing-text{
+    font-size:18px;
+    color:#e9d9b8;
+}
+
+.final-message{
+    width:min(850px,90%);
+
+    margin-top:60px;
+
+    padding-top:40px;
+
+    border-top:
+        1px solid
+        rgba(212,175,55,.3);
+
+    font-size:18px;
+    line-height:2;
+
+    text-align:center;
+
+    color:#d9c9a6;
+}
+
+.final-message strong{
+    color:#f2dfb0;
+}
+
+.final-love{
+    margin-top:45px;
+
+    font-family:"Great Vibes",cursive;
+
+    color:#d4af37;
+
+    font-size:48px;
+}
+
+/* =====================================================
+   PAGE NAVIGATION
+===================================================== */
+
+.site-page{
+    display:none;
+}
+
+.site-page.active{
+    display:flex;
+    animation:pageReveal 1s ease;
+}
+
+@keyframes pageReveal{
+
+    from{
+        opacity:0;
+        transform:translateY(25px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media(max-width:700px){
+
+    body::after{
+        inset:12px;
+    }
+
+    .envelope-wrapper{
+        width:300px;
+        height:205px;
+    }
+
+    .flap{
+        height:108px;
+    }
+
+    .wax-seal{
+        width:68px;
+        height:68px;
+        top:88px;
+    }
+
+    .wax-seal::before{
+        font-size:27px;
+    }
+
+    .letter-page{
+        padding:
+            70px
+            20px
+            100px;
+    }
+
+    .letter-paper{
+        width:95%;
+        padding:50px 28px;
+    }
+
+    .letter-paper p{
+        font-size:15px;
+        line-height:1.85;
+    }
+
+    .dear{
+        font-size:35px;
+    }
+
+    .next-arrow{
+        right:15px;
+        width:48px;
+        height:48px;
+    }
+
+    .award-page{
+        padding:70px 20px;
+    }
+
+    .certificate{
+        padding:65px 30px;
+    }
+
+    .award-text{
+        font-size:16px;
+        line-height:1.8;
+    }
+
+    .music-title{
+        font-size:60px;
+    }
+
+    .things-intro{
+        padding:30px;
+    }
+
+    .things-page{
+        padding:
+            80px
+            20px
+            110px;
+    }
+
+    .thing{
+        padding:15px 5px;
+        gap:15px;
+    }
+
+    .thing-text{
+        font-size:15px;
+    }
+
+    .final-message{
+        font-size:15px;
+        line-height:1.85;
+    }
+}
+
+</style>
+</head>
+
+
+<body>
+
+<!-- Background particles -->
+
+<div class="particle p1"></div>
+<div class="particle p2"></div>
+<div class="particle p3"></div>
+<div class="particle p4"></div>
+<div class="particle p5"></div>
+<div class="particle p6"></div>
+
+
+<!-- =====================================================
+     OPENING
+===================================================== -->
+
+<section id="openingPage">
+
+    <div class="opening-subtitle">
+        A little something for you
+    </div>
+
+    <div
+        class="envelope-wrapper"
+        id="envelopeWrapper"
+    >
+
+        <div class="envelope">
+
+            <div class="flap"></div>
+
+            <div class="envelope-front"></div>
+
+            <div class="envelope-gold-line"></div>
+
+            <div class="wax-seal"></div>
+
+            <button
+                class="open-button"
+                id="openButton"
+            >
+                OPEN
+            </button>
+
+        </div>
+
+    </div>
+
+    <div class="open-hint">
+        TOUCH THE GOLDEN SEAL
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     MAIN WEBSITE
+===================================================== -->
+
+<main id="mainWebsite">
+
+
+<!-- =====================================================
+     PAGE 1 — LETTER
+===================================================== -->
+
+<section
+    class="site-page letter-page active"
+    id="page1"
+>
+
+    <div class="page-label">
+        WITH ALL MY LOVE
+    </div>
+
+    <h1 class="big-title">
+        Happy Boyfriend's Day
+    </h1>
+
+    <div class="big-title-script">
+        My Cutiee ❤️
+    </div>
+
+
+    <div class="letter-paper">
+
+        <div class="letter-inner">
+
+            <div class="dear">
+                Dear Pancham, ❤️
+            </div>
+
+
+            <p>
+                I don't know if I'll ever be able to say all of this to you face-to-face,
+                and that's why this letter is for you. I want you to know that ever since
+                you came into my life, everything has felt so much more complete. Every
+                time I see your face, my day instantly becomes happier. When I'm with you,
+                nothing else matters to me, and I forget about everything around me.
+                I'm truly thankful to God for bringing me to that school, where I got
+                the chance to meet you.
+            </p>
+
+
+            <p>
+                I will never forget those days when we used to secretly look at each other,
+                talk silently, and find silly excuses just to touch each other. Whether it
+                was borrowing a book, a pen, or a piece of paper, we always found a reason
+                to talk. I still can't believe how quickly our school days passed, college
+                started, and we completed three years of being together.
+            </p>
+
+
+            <p>
+                But I still remember the day you proposed to me as if it happened yesterday.
+                Even after three years of being together, I still get butterflies when you
+                touch me. Whenever you look at me for a long time, I still forget how to
+                react. It's crazy how you can still make me feel the same way even after
+                all this time.
+            </p>
+
+
+            <p>
+                Thank you for tolerating all my fights, my endless questions, my jealousy,
+                my insecurities, and everything else. Thank you for being patient with me
+                and for accepting me just the way I am. I feel so blessed to have you as
+                my better half, and I'm genuinely grateful to have someone like you in
+                my life.
+            </p>
+
+
+            <p>
+                Every single day, I pray to God to always protect you from all the negativity
+                and bad people in this world, to keep you safe, and to bless you with all
+                the happiness you deserve. I hope you achieve every single one of your dreams
+                and become the person you've always wanted to be. I want to see you succeed,
+                grow, and achieve everything you've ever wished for. I'll always wish the
+                best for you and your future.
+            </p>
+
+
+            <p>
+                And somewhere in my heart, I hope that one day all our dreams come true,
+                that we get to live a happy married life together, create beautiful memories,
+                and stay by each other's side through every phase of life. I hope we get to
+                experience all the little and big moments we've talked about and dreamed of
+                together.
+            </p>
+
+
+            <p>
+                Lastly, I just want to tell you that you complete my world in ways I can't
+                explain in words. You are so special to me, and no matter how many times I
+                say it, it will never feel enough.
+            </p>
+
+
+            <div class="letter-ending">
+                I love you so, so much, my cutieee. ❤️🫂
+            </div>
+
+            <div class="forever">
+                Forever yours. ❤️
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <button
+        class="next-arrow"
+        onclick="nextPage()"
+        aria-label="Next page"
+    >
+        →
+    </button>
+
+</section>
+
+
+
+<!-- =====================================================
+     PAGE 2 — AWARD
+===================================================== -->
+
+<section
+    class="site-page award-page"
+    id="page2"
+>
+
+    <div class="certificate">
+
+        <div class="certificate-top">
+            OFFICIALLY PRESENTED TO
+        </div>
+
+        <h2 class="award-title">
+            Best Boyfriend
+            <br>
+            Award
+        </h2>
+
+        <div class="award-line"></div>
+
+        <p class="award-text">
+
+            The Best Boyfriend Award goes to you for being
+            the most caring, understanding, and cutest person
+            on this entire planet. ❤️🏆
+
+        </p>
+
+        <div class="award-seal">
+            BEST<br>BF
+        </div>
+
+    </div>
+
+
+    <button
+        class="next-arrow"
+        onclick="nextPage()"
+        aria-label="Next page"
+    >
+        →
+    </button>
+
+</section>
+
+
+
+<!-- =====================================================
+     PAGE 3 — MUSIC
+===================================================== -->
+
+<section
+    class="site-page music-page"
+    id="page3"
+>
+
+    <div class="music-stars">
+
+        <span class="music-star star1">✦</span>
+        <span class="music-star star2">✧</span>
+        <span class="music-star star3">✦</span>
+        <span class="music-star star4">✧</span>
+        <span class="music-star star5">✦</span>
+        <span class="music-star star6">✧</span>
+
+    </div>
+
+
+    <div class="music-label">
+        OUR SONG
+    </div>
+
+    <h2 class="music-title">
+        Tum Se Hi
+    </h2>
+
+    <div class="music-subtitle">
+        A little song for us
+    </div>
+
+
+    <div class="music-card">
+
+        <div class="spotify-symbol">
+            ♪
+        </div>
+
+        <div class="song-name">
+            Tum Se Hi
+        </div>
+
+        <div class="song-artist">
+            Jab We Met
+        </div>
+
+
+        <button
+            class="play-song"
+            id="playSong"
+        >
+            ▶ PLAY OUR SONG
+        </button>
+
+    </div>
+
+
+    <!-- YouTube player -->
+    <div class="youtube-player">
+
+        <iframe
+            id="youtubeFrame"
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/Cb6wuzOurPc?enablejsapi=1"
+            title="Tum Se Hi"
+            frameborder="0"
+            allow="autoplay; encrypted-media; picture-in-picture"
+            allowfullscreen>
+        </iframe>
+
+    </div>
+
+
+    <button
+        class="next-arrow"
+        onclick="nextPage()"
+        aria-label="Next page"
+    >
+        →
+    </button>
+
+</section>
+
+
+
+<!-- =====================================================
+     PAGE 4 — 10 THINGS INTRO
+===================================================== -->
+
+<section
+    class="site-page things-intro"
+    id="page4"
+>
+
+    <div class="things-small">
+        A LIST THAT COULD NEVER BE LONG ENOUGH
+    </div>
+
+    <h2 class="things-title">
+        10 Things I Love
+        <br>
+        About You
+    </h2>
+
+    <div class="things-heart">
+        ❤️
+    </div>
+
+
+    <button
+        class="next-arrow"
+        onclick="nextPage()"
+        aria-label="Next page"
+    >
+        →
+    </button>
+
+</section>
+
+
+
+<!-- =====================================================
+     PAGE 5 — 10 THINGS
+===================================================== -->
+
+<section
+    class="site-page things-page"
+    id="page5"
+>
+
+    <h2 class="things-heading">
+        10 Things I Love About You ❤️
+    </h2>
+
+
+    <div class="things-list">
+
+        <div class="thing">
+            <div class="number">01</div>
+            <div class="thing-text">
+                Your beautiful smile.
+            </div>
+        </div>
+
+        <div class="thing">
+            <div class="number">02</div>
+            <div class="thing-text">
+                The way you care for me.
+            </div>
+        </div>
+
+        <div class="thing">
+            <div class="number">03</div>
+            <div class="thing-text">
+                Your understanding nature.
+            </div>
+        </div>
+
+        <div class="thing">
+            <div class="number">04</div>
+            <div class="thing-text">
+                Your dedication and concentration towards your studies.
+            </div>
+        </div>
+
+        <div class="thing">
+            <div class="number">05</div>
+            <div class="thing-text">
+                Your silly talks that always make me smile.
+            </div>
+        </div>
+
+        <div class="thing">
+            <div class="number">06</div>
+            <div class="thing-text">
+                Your adorable childish behaviour.
+            </div>
+        </div>
+
+        <div class="thing">
+            <div class="number">07</div>
+            <div class="thing-text">
+                The way you care for your parents.
+            </div>
+        </div>
+
+        <div class="thing">
+            <div class="number">08</div>
+            <div class="thing-text">
+                Your loyalty.
+            </div>
+        </div>
+
+        <div class="thing">
+            <div class="number">09</div>
+            <div class="thing-text">
+                Your IQ, of course!
+            </div>
+        </div>
+
+        <div class="thing">
+            <div class="number">10</div>
+            <div class="thing-text">
+                Your amazing taste in music.
+            </div>
+        </div>
+
+    </div>
+
+
+    <div class="final-message">
+
+        And honestly, you're the GOAT, man! ❤️
+
+        It's so difficult to name just 10 things I love about you because,
+        when it comes to you, I love absolutely everything.
+
+        Every little thing you do, every little thing about you,
+        and even the things you don't notice about yourself are special to me.
+
+        I just love everything and anything that has to do with you. ❤️🫂
+
+        <div class="final-love">
+            Forever yours. ❤️
+        </div>
+
+    </div>
+
+</section>
+
+
+</main>
+
+
+
+<script>
+
+/* =====================================================
+   OPENING ENVELOPE
+===================================================== */
+
+const envelopeWrapper =
+    document.getElementById("envelopeWrapper");
+
+const openButton =
+    document.getElementById("openButton");
+
+const openingPage =
+    document.getElementById("openingPage");
+
+const mainWebsite =
+    document.getElementById("mainWebsite");
+
+
+let envelopeOpened = false;
+
+
+/* Click envelope / wax */
+
+envelopeWrapper.addEventListener("click", function(){
+
+    if(!envelopeOpened){
+
+        envelopeOpened = true;
+
+        envelopeWrapper.classList.add("opened");
+
+    }
+
+});
+
+
+/* Click OPEN */
+
+openButton.addEventListener("click", function(event){
+
+    event.stopPropagation();
+
+    openingPage.style.opacity = "0";
+    openingPage.style.transform = "translateY(-35px)";
+
+    setTimeout(function(){
+
+        openingPage.style.display = "none";
+
+        mainWebsite.style.display = "block";
+
+        window.scrollTo({
+            top:0,
+            behavior:"smooth"
+        });
+
+    },1100);
+
+});
+
+
+
+/* =====================================================
+   PAGE NAVIGATION
+===================================================== */
+
+let currentPage = 1;
+
+const totalPages = 5;
+
+
+function showPage(pageNumber){
+
+    for(
+        let i = 1;
+        i <= totalPages;
+        i++
+    ){
+
+        const page =
+            document.getElementById("page" + i);
+
+        if(page){
+
+            page.classList.remove("active");
+
+        }
+
+    }
+
+
+    const selectedPage =
+        document.getElementById(
+            "page" + pageNumber
+        );
+
+    selectedPage.classList.add("active");
+
+    window.scrollTo({
+        top:0,
+        behavior:"smooth"
+    });
+
+}
+
+
+function nextPage(){
+
+    if(currentPage < totalPages){
+
+        currentPage++;
+
+        showPage(currentPage);
+
+    }
+
+}
+
+
+
+/* =====================================================
+   YOUTUBE MUSIC
+===================================================== */
+
+const playSong =
+    document.getElementById("playSong");
+
+const youtubeFrame =
+    document.getElementById("youtubeFrame");
+
+
+let musicPlaying = false;
+
+
+playSong.addEventListener("click", function(){
+
+    if(!musicPlaying){
+
+        youtubeFrame.contentWindow.postMessage(
+            JSON.stringify({
+                event:"command",
+                func:"playVideo",
+                args:[]
+            }),
+            "*"
+        );
+
+        playSong.innerHTML =
+            "❚❚ MUSIC PLAYING";
+
+        musicPlaying = true;
+
+    }
+
+});
+
+
+</script>
+
+</body>
+</html>
